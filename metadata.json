@@ -1,0 +1,6 @@
+{
+  "name": "Cadence — Plan Every Horizon",
+  "description": "Advanced multi-horizon goal planning, AI coach, calendar tracking, streaks, and productivity insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

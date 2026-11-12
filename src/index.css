@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #EDF0F7;
+  --surf: #fff;
+  --surf2: #F5F7FB;
+  --ink: #151B2E;
+  --mute: #6A7389;
+  --line: #DCE1ED;
+  --acc: #F59E0B;
+  --shadow: 0 1px 2px rgba(21, 27, 46, .06), 0 8px 28px -12px rgba(21, 27, 46, .18);
+  color-scheme: light;
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0D1120;
+    --surf: #171C31;
+    --surf2: #1E2440;
+    --ink: #EEF1FA;
+    --mute: #98A1BC;
+    --line: #2A3150;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 30px -12px rgba(0, 0, 0, .6);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0D1120;
+  --surf: #171C31;
+  --surf2: #1E2440;
+  --ink: #EEF1FA;
+  --mute: #98A1BC;
+  --line: #2A3150;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 30px -12px rgba(0, 0, 0, .6);
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 16px/1.5 "Instrument Sans", system-ui, sans-serif;
+  transition: background 0.4s;
+}
+
+@keyframes pop {
+  from { opacity: 0; transform: scale(0.94) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes gr {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+@keyframes sl {
+  from { opacity: 0; transform: translateX(70px) scale(0.95); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
